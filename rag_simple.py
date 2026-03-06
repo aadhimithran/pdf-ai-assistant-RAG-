@@ -30,7 +30,7 @@ while True:
     results = db.similarity_search(question, k=3)
     context = "\n".join([doc.page_content for doc in results])
     
-    # FIXED PROMPT - இது முக்கியம்!
+    # FIXED PROMPT - (important) 
     answer = llm.invoke(f"""Use ONLY this handbook context to answer:
 
 CONTEXT:
